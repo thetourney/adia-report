@@ -1,6 +1,6 @@
 # ADIA LAB CAUSAL DISCOVERY CHALLENGE
 
-In August 2024, Adia Lab and CrunchDAO launched a competition to help advance the field of Causal Discovery in AI. Participants were given a set of 23.500 observational data, each of which containing 1000 observations for a number of variables ranging from 3 to 10. There were 2 special variables, namely $X$ (the treatment) and $Y$ (the outcome). The goal of this competition was to classify each variable according to their relationship with $X$ and $Y$.
+In August 2024, Adia Lab and CrunchDAO launched a competition to help advance the field of Causal Discovery in AI. Participants were given a set of 25380 observational data, each of which containing 1000 observations for a number of variables ranging from 3 to 10. There were 2 special variables, namely $X$ (the treatment) and $Y$ (the outcome). The goal of this competition was to classify each variable according to their relationship with $X$ and $Y$.
 
 <figure style="text-align: center;">
   <img src="assets/img/classes.png" alt="Data and classes" />
@@ -129,6 +129,6 @@ In each case, the loss is weighted by the inverse frequency of each class.
 
 The solution uses a multivariate kernel regression but no other regression technique was evaluated. We could go even further and wonder whether the regression could have been performed directly by the neural network in the very first layers (for a truly end-to-end solution). After all, minimizing the regression loss could be done by gradient descent.
 
-The model is lightweigt (less than 0.3M parameters). During the development phase, inference was performed on a set of 9.000 observational data. The computation of the multivariate regression was parallelized and took about 17min30 (on a 32-core CPU). Inference on a single model then took about 1min30 on GPU (one graph at a time, sequentially).
+The model is lightweigt (less than 0.3M parameters). During the development phase, inference was performed on a set of 9000 observational data. The computation of the multivariate regression was parallelized and took about 17min30 (on a 32-core CPU). Inference on a single model then took about 1min30 on GPU (one graph at a time, sequentially).
 
 Finally, I would like to thank everybody involved in the preparation of this challenge. It was my first experience with causal discovery and this was a great learning experience!
